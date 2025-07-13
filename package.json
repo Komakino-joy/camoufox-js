@@ -1,12 +1,12 @@
 {
-  "name": "camoufox-js",
-  "version": "0.6.0",
+  "name": "komakino-camoufox-js-fork",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc && npm run copy-files",
     "test": "vitest",
-    "copy-files": "cp -r src/data-files dist/data-files"
+    "copy-files": "cpx src/data-files/**/* dist/data-files"
   },
   "bin": "dist/__main__.js",
   "files": [
@@ -16,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "MPL-2.0",
-  "description": "Experimental JS port of Camoufox for Python.",
+  "description": "Fork of camoufox-js",
   "packageManager": "yarn@4.9.2",
   "dependencies": {
     "adm-zip": "^0.5.16",
@@ -26,6 +26,7 @@
     "js-yaml": "^4.1.0",
     "language-tags": "^2.0.1",
     "maxmind": "^4.3.24",
+    "path": "^0.12.7",
     "progress": "^2.0.3",
     "sqlite3": "^5.1.7",
     "ua-parser-js": "^2.0.2",
@@ -38,6 +39,7 @@
     "@types/node": "^22.13.2",
     "@types/progress": "^2.0.7",
     "@types/xml2js": "^0.4.14",
+    "cpx": "^1.5.0",
     "playwright-core": "^1.53.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3",
